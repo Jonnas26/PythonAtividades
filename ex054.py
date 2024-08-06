@@ -1,16 +1,14 @@
-maior = menor = 0
-#criando o loop de perguntas sobre a idade
+maioridade = menoridade = 0
+#importando o ano atual e definindo um objeto para ele
+from datetime import date
+hoje = date.today().year
+#criando o laço para saber o ano de nascimento de cada pessoa
 for c in range(0,7):
-    idade = int(input(f'Quantos anos a {c+1}º pessoa tem?'))
-#se o primeiro for "c" e a "idade" maior que "c" ele sera o maior e o menor
-    if c == 0 and idade > c:
-        maior = idade
-        menor = idade
-#sabendo se alguma idade depois do primeiro for maior será o maior ou menor será o menor
-    elif c > maior:
-        maior = idade
-    elif c < menor:
-        menor = idade
-#resultado
-print(f'Maior idade foi de {maior} anos,'
-      f'A menor idade foi de {menor} anos')
+    ano = int(input('Em que ano nasceu?'))
+#sabendo a idade ao subtrair o ano atual com o nascimento
+    if hoje - ano >= 18:
+        maioridade += 1
+    elif hoje - ano < 18:
+        menoridade += 1
+print(f'Tem {maioridade} pessoas acima ou igual a 18 anos.'
+      f'E tem {menoridade} pessoa menores de 18 anos.')
