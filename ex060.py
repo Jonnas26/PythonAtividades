@@ -1,4 +1,4 @@
-n = int(input('Digite um numero para saber seu fatoria:'))
+n = int(input('Digite um numero para saber seu fatorial:'))
 c = n
 f = 1
 print(f'{c}! =', end='')
