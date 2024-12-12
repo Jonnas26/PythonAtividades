@@ -4,8 +4,13 @@ for simb in expressao:
     if simb in '(':
         pilha.append(simb)
     elif simb in ')':
-        pilha.append(simb)
-if len(pilha) % 2 == 0:
-    print('Expressão valida.')
+        if len(pilha) > 0:
+            pilha.pop()
+        else:
+            pilha.append(')')
+            break
+if len(pilha) == 0:
+    print('A sua expressão esta correta!')
 else:
-    print('Expressão invalida.')
+    print('A sua expressão esta errada!')
+    
