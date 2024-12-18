@@ -19,12 +19,12 @@ for peso in pessoas:
         menorpeso = peso[1]
 print('==' * 20)
 print(f'Foram cadastrados um total de {tot} pessoas .')
-print(f'Maior peso foi {maiorpeso}, e foi de',end=' ')
+print(f'Maior peso foi {maiorpeso} KG, e foi de ',end=' ')
 for p in pessoas:
     if p[1] == maiorpeso:
-        print(f'{p[0]}',end=' ')
+        print(f'{p[0]} ',end=' ')
 print()
-print(f'O menor peso foi de {menorpeso},e foi de ', end=' ')
+print(f'O menor peso foi de {menorpeso} KG , e foi de ', end=' ')
 for p in pessoas:
     if p[1] == menorpeso:
         print(f'{p[0]}',end=' ')

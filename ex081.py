@@ -13,7 +13,6 @@ print(f'Foi digitado um total de {len(lista)} elementos.')
 lista.sort(reverse=True)
 print(f'Em ordem decrescente fica {lista}')
 if 5 in lista:
-    print('tem 5')
+    print('O valor 5 foi encontrado na Lista.')
 else:
-    print('Nao tem')
-    
+    print('O valor Nao foi encontrado na Lista.')
