@@ -1,16 +1,27 @@
 from random import randint
+from time import sleep
 jogos = []
+cartela = []
 print('--' * 20)
 print(f'{"MEGA-SENA":^40}')
 print('--' * 20)
-jogo = int(input('Quantos jogos deseja : '))
-print('=-' * 5,'SORTEANDO JOGOS','=-' * 5)
-for c in range(jogo):
-    cartela = []
-    for j in range(6):
-        valor = randint(1,10)
-        cartela.append(valor)
+quant = int(input('Quantos jogos deseja : '))
+tot = 1
+while tot <= quant:
+    cont = 0
+    while True:
+        num = randint(0,60)
+        if num not in cartela:
+            cartela.append(num)
+            cont += 1
+        if cont == 6:
+            break
+    cartela.sort()
     jogos.append(cartela[:])
-for cartelas in enumerate(jogos):
-    print(f'JOGO {cartelas[0] + 1} : {cartelas[1]}')
-print('=-' * 20)
+    cartela.clear()
+    tot += 1
+print('SORTEANDO JOGOS')
+for i,v in enumerate(jogos):
+    print(f'{i + 1}° jogo : {v}')
+    sleep(1)
+print('BOA SORTE!')
