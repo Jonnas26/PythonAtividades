@@ -14,4 +14,3 @@ for i,v in enumerate(rank):
     print(f'{i + 1}° Lugar : {v[0]} tirou {v[1]} nos dados.')
     sleep(1)
 print('==' * 20)
-
