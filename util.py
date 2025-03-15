@@ -8,3 +8,4 @@ def dobro(num):
 
 def aumento10(num):
     return num + (num * 10)/100
+

@@ -1,4 +1,5 @@
 def leiaint(msg):
+    
     ok = False
     valor = 0
     while True:

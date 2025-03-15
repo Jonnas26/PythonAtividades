@@ -1,4 +1,10 @@
 def notas(* núm, sit=False):
+    """
+
+    :param núm: Os numeros das NOTAS que foram adicionadas
+    :param sit: Mostra a SITuação do aluno baseado na média dele
+    :return: Retorna um dicionario contendo a maior e menor nota do aluno,média e situação caso queira
+    """
     aluno = {}
     aluno['Total'] = len(núm) 
     maior = menor = 0
