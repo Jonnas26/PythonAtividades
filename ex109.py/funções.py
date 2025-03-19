@@ -10,7 +10,7 @@ def dobro(num=0 , formato=False):
 
 def aumento10(num=0, taxa=0 ,formato=False):
     res = num + (num * taxa / 100)
-    return res
+    return res if formato is False else moeda(res)
 
 
 def moeda(num=0, moeda='R$'):
