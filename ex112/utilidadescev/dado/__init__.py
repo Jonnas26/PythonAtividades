@@ -7,3 +7,4 @@ def leiaDinheiro(msg):
         else:
             valido = True
             return float(entrada)
+        
